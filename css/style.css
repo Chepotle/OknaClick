@@ -128,6 +128,7 @@ body main {
   color: #28B663;
   font-weight: 30px;
   font-weight: 900;
+  text-align: center;
 }
 
 .h3 {
@@ -310,13 +311,13 @@ h5 {
 }
 
 .window {
-  margin-bottom: 5rem;
+  margin-bottom: 40px;
   position: relative;
 }
 
 .window .h2 {
   margin-bottom: 20px;
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
 .window img {
@@ -458,7 +459,7 @@ h5 {
 }
 
 .work {
-  margin-top: 35px;
+  margin-top: 40px;
 }
 
 .work_text {
@@ -490,7 +491,7 @@ h5 {
 }
 
 .cost {
-  margin: 80px 0;
+  margin: 40px 0;
   background-color: #28B663;
   background-image: url(../img/ost4.png);
   background-position: right;
@@ -588,7 +589,6 @@ h5 {
 }
 
 .about_block {
-  height: 335px;
   position: relative;
 }
 
@@ -649,15 +649,28 @@ h5 {
   margin-top: 45px;
 }
 
+.scheme_article {
+  margin-bottom: 45px;
+}
+
 .scheme_item {
   padding: 8px;
-  min-width: 360px;
   -webkit-box-shadow: 5px 5px 30px grey;
           box-shadow: 5px 5px 30px grey;
   position: relative;
   background-color: white;
   z-index: 3;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .scheme_item::after {
@@ -731,7 +744,7 @@ h5 {
 }
 
 .container_h2 {
-  margin-top: 45px;
+  margin-top: 20px;
 }
 
 .awards {
@@ -795,6 +808,7 @@ h5 {
 
 .request_btn {
   width: 263px;
+  margin: 0 auto;
 }
 
 .request_info {
@@ -810,6 +824,10 @@ h5 {
 .request_img {
   width: 100%;
   height: 100%;
+}
+
+.request_form {
+  text-align: center;
 }
 
 .pay {
@@ -877,7 +895,7 @@ h5 {
   font-weight: 100;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .navbar-brand {
     display: none;
   }
@@ -897,10 +915,6 @@ h5 {
   .about_circle-2 {
     bottom: 5%;
     right: -20%;
-  }
-  .scheme_item {
-    width: 310px;
-    height: 200px;
   }
   .scheme_item::after {
     left: 7px;
@@ -925,7 +939,7 @@ h5 {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .navbar-brand {
     display: inline-block;
   }
@@ -989,7 +1003,37 @@ h5 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .about_content {
+    margin-bottom: 40px;
+  }
+  .work_text {
+    margin-top: 40px;
+  }
+  .window_block {
+    margin-bottom: 40px;
+  }
+  .cost {
+    text-align: center;
+  }
+  .cost h2 {
+    margin: 0 auto;
+  }
+  .cost_btn {
+    margin: 0 auto;
+  }
+  .intro_content {
+    text-align: center;
+  }
+  .intro_btn {
+    margin: a auto;
+  }
+  .call {
+    text-align: center;
+  }
+  .call_btn {
+    margin: 0 auto;
+  }
   .work::after {
     right: 15px;
   }
@@ -1016,9 +1060,6 @@ h5 {
   }
   .scheme {
     margin-top: 1.5rem !important;
-  }
-  .scheme_item {
-    width: 100%;
   }
   .scheme_circle-1 {
     display: none;
@@ -1077,9 +1118,12 @@ h5 {
   .footer_text {
     text-align: center !important;
   }
+  .footer {
+    text-align: center;
+  }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .intro_title {
     font-size: 42px;
   }

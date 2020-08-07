@@ -76,6 +76,7 @@ $cyg: #ABCB56;
     color: $cg;
     font-weight: 30px;
     font-weight: 900;
+    text-align: center;
 }
 
 .h3 {
@@ -267,11 +268,11 @@ h5 {
 // window
 
 .window {
-    margin-bottom: 5rem;
+    margin-bottom: 40px;
     position: relative;
     .h2 {
         margin-bottom: 20px;
-        margin-top: 35px;
+        margin-top: 30px;
     }
     img {
         height: 100%;
@@ -420,7 +421,7 @@ h5 {
 // work
 
 .work {
-    margin-top: 35px;
+    margin-top: 40px;
 }
 
 .work_text {
@@ -453,7 +454,7 @@ h5 {
 // cost
 
 .cost {
-    margin: 80px 0; 
+    margin: 40px 0; 
     background-color: $cg;
     background-image: url(../img/ost4.png);
     background-position: right;
@@ -540,7 +541,6 @@ h5 {
 }
 
 .about_block {
-    height: 335px;
     position: relative;
 }
 
@@ -601,14 +601,20 @@ h5 {
     margin-top: 45px;
 }
 
+.scheme_article {
+    margin-bottom: 45px;
+}
+
 .scheme_item{
     padding: 8px;
-    min-width: 360px;
     box-shadow: 5px 5px 30px grey;
     position: relative;
     background-color: white;
     z-index: 3;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     &::after {
         content: "";
         position: absolute;
@@ -681,7 +687,7 @@ h5 {
 // awards
 
 .container_h2 {
-    margin-top: 45px;
+    margin-top: 20px;
 }
 
 .awards {
@@ -747,6 +753,7 @@ h5 {
 .request_btn {
     @extend %btn-grd;
     width: 263px;
+    margin: 0 auto;
 }
 
 .request_info {
@@ -761,6 +768,10 @@ h5 {
 .request_img {
     width: 100%;
     height: 100%;
+}
+
+.request_form {
+    text-align: center;
 }
 
 // pay
@@ -841,9 +852,9 @@ h5 {
 
 // media
 
-// 1200
+// 1199
 
-@media(max-width:1200px) {
+@media(max-width:1199px) {
     .navbar-brand {
         display: none;
     }
@@ -870,8 +881,7 @@ h5 {
 
 
     .scheme_item {
-        width: 310px;
-        height: 200px;
+        
         &::after {
             left: 7px;
         }
@@ -904,9 +914,9 @@ h5 {
     }
 }
 
-// 992
+// 991
 
-@media(max-width:992px) {
+@media(max-width:991px) {
 
     .navbar-brand {
         display: inline-block;
@@ -986,9 +996,50 @@ h5 {
     }
 }
 
-// 768
+// 767
 
-@media(max-width:768px) {
+@media(max-width:767px) {
+
+    
+    .about_content {
+        margin-bottom: 40px;
+    }
+
+    .work_text {
+        margin-top: 40px;
+    }
+
+    .window_block {
+        margin-bottom: 40px;
+    }
+
+    .cost {
+        text-align: center;
+    }
+
+    .cost h2 {
+        margin:  0 auto;
+    }
+
+    .cost_btn {
+        margin: 0 auto;
+    }
+
+    .intro_content {
+        text-align: center;
+    }
+
+    .intro_btn {
+        margin: a auto;
+    }
+
+    .call {
+        text-align: center;
+    }
+
+    .call_btn {
+        margin:  0 auto;
+    }
 
     .work {
         &::after {
@@ -1031,9 +1082,6 @@ h5 {
         margin-top: 1.5rem !important;
     }
 
-    .scheme_item {
-        width: 100%;
-    }
 
     .scheme_circle-1 {
         display: none;
@@ -1106,12 +1154,16 @@ h5 {
     .footer_text {
         text-align: center !important;
     }
+
+    .footer {
+        text-align: center;
+    }
     
 }
 
-// 576
+// 575
 
-@media(max-width:576px) {
+@media(max-width:575px) {
 
     .intro_title {
         font-size: 42px;

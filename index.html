@@ -728,7 +728,7 @@
         <div class="container scheme">
             <h2 class="h2">Схема работы</h2>
             <div class="row scheme_row">
-                <div class="col-lg-4 col-md-6 col-12 mt-4 d-flex">
+                <div class="col-lg-4 col-md-6 col-12 d-flex scheme_article">
                     <div class="scheme_item">
                         <div class="scheme_title pl-5">
                             <p>1. Бесплатный замер</p>
@@ -745,7 +745,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-12 mt-4 d-flex">
+                <div class="col-lg-4 col-md-6 col-12 d-flex scheme_article">
                     <div class="scheme_item">
                         <div class="scheme_title pl-5">
                             <p>2. Консультация</p>
@@ -760,7 +760,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-12 mt-4 d-flex">
+                <div class="col-lg-4 col-md-6 col-12 d-flex scheme_article">
                     <div class="scheme_item">
                         <div class="scheme_title pl-5">
                             <p>3. Замер</p>
@@ -772,7 +772,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-12 mt-4 d-flex">
+                <div class="col-lg-4 col-md-6 col-12 d-flex scheme_article">
                     <div class="scheme_item">
                         <div class="scheme_title pl-5">
                             <p>4. Доставка</p>
@@ -783,7 +783,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-12 mt-4 d-flex">
+                <div class="col-lg-4 col-md-6 col-12 d-flex scheme_article">
                     <div class="scheme_item">
                         <div class="scheme_title pl-5">
                             <p>5. Монтаж</p>
@@ -794,7 +794,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-12 mt-4 d-flex">
+                <div class="col-lg-4 col-md-6 col-12 d-flex scheme_article">
                     <div class="scheme_item">
                         <div class="scheme_title pl-5">
                             <p>6. Готово!</p>
@@ -870,41 +870,26 @@
         </div>
 
         <div class="row no-gutters request">
-            <div class="col-lg-6 col-12">
-                <div class="row justify-content-center align-items-center request_row">
-                    <div class="col-12">
-                        <h2 class="h2 text-center mt-3">ОФОРМИТЕ ЗАЯВКУ <br> НА БЕСПЛАТНЫЙ ЗАМЕР</h2>
+            <div class="col-lg-6 col-12 d-flex align-items-center flex-column request_block">
+
+                <h2 class="h2 text-center mt-3">ОФОРМИТЕ ЗАЯВКУ <br> НА БЕСПЛАТНЫЙ ЗАМЕР</h2>
+                <form action="" method="POST" class="request_form">
+                    <input placeholder="Ваше имя" type="text" name="" id="" class="mt-4 mb-3 call_name  request_input">
+                    <div class="row">
+                        <div class="col-12">
+                            <input placeholder="Ваш телефон" type="text" name="" id=""
+                                class="call_tel request_input mb-3">
+                        </div>
                     </div>
-                    <form action="" method="POST">
-                        <div class="row">
-                            <div class="col-12">
-                                <input placeholder="Ваше имя" type="text" name="" id=""
-                                    class="mt-4 mb-3 call_name  request_input">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <input placeholder="Ваш телефон" type="text" name="" id=""
-                                    class="call_tel request_input mb-3">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <a href="#" class="request_btn">Отправить заявку</a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="request_info mt-3">
-                                    Нажимая кнопку, вы соглашаетесь <br>с условиями <span>Политики
-                                        конфиденциальности.</spa>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    <a href="#" class="request_btn">Отправить заявку</a>
+                    <div class="request_info mt-3">
+                        Нажимая кнопку, вы соглашаетесь <br>с условиями <span>Политики
+                            конфиденциальности.</spa>
+                    </div>
+                </form>
             </div>
-            <div class="col-lg-6 col-12">
+
+            <div class="col-lg-6 col-12 d-flex">
                 <img src="./img/ost6.png" alt="img" class="img-fluid request_img">
             </div>
         </div>
@@ -945,7 +930,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row pt-5">
-                <div class="col-lg-2 col-md-6 col-12 footer_col">
+                <div class="col-xl-2 col-md-6 col-sm-12 footer_col">
                     <img src="./img/logo2.png" alt="img" class="img-fluid footer_logo">
                     <div class="footer_tel mt-2">
                         <img src="./icons/phone.svg" alt="img" class="img-fluid">
@@ -961,7 +946,7 @@
                         <a href="#"><img src="./icons/vk.svg" alt="img" class="img-fluid"></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12">
+                <div class="col-xl-3 col-md-6 col-sm-12">
                     <h5>ОТДЕЛКА ЛОДЖИЙ И БАЛКОНОВ</h5>
                     <ul class="footer_list">
                         <a href="">
@@ -1015,7 +1000,7 @@
                         </a>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-xl-4 col-md-6 col-sm-12">
                     <h5>ОСТЕКЛЕНИЕ БАЛКОНОВ И ЛОДЖИЙ</h5>
                     <ul class="footer_list">
                         <a href="">
@@ -1068,7 +1053,7 @@
                         </a>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12">
+                <div class="col-xl-3 col-md-6 col-sm-12">
                     <h5>ПЛАСТИКОВЫЕ ОКНА</h5>
                     <ul class="footer_list">
                         <a href="">
@@ -1128,19 +1113,6 @@
                 Разработано и продвигается веб-студией SeoVolga
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     </footer>
