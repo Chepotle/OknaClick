@@ -69,6 +69,7 @@ body main {
 
 .navi_btn:hover, .trade_btn:hover, .call_btn:hover, .cost_btn:hover, .scheme_btn:hover, .request_btn:hover {
   text-decoration: none;
+  background: linear-gradient(-45deg, #f11c20, #ec9e20);
 }
 
 .trade_title {
@@ -333,18 +334,18 @@ h5 {
   overflow: auto;
 }
 
-.window_block::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10px;
-  min-height: 346px;
-  background-color: #ABCB56;
-}
-
 .window_block .window_text {
   overflow: auto;
+}
+
+.window_section::after {
+  content: "";
+  position: absolute;
+  top: 58px;
+  left: 15px;
+  width: 10px;
+  height: 346px;
+  background-color: #ABCB56;
 }
 
 .present_text {
@@ -553,7 +554,9 @@ h5 {
 .cost_img {
   position: absolute;
   bottom: 0;
-  right: 19%;
+  right: 0;
+  -webkit-transform: translateX(-85%);
+          transform: translateX(-85%);
 }
 
 .about_row {
@@ -940,6 +943,19 @@ h5 {
 }
 
 @media (max-width: 991px) {
+  .cost_img {
+    display: none;
+  }
+  .cost {
+    background-image: none;
+    text-align: center;
+  }
+  .cost h2 {
+    margin: 0 auto;
+  }
+  .cost_btn {
+    margin: 0 auto;
+  }
   .navbar-brand {
     display: inline-block;
   }
@@ -1004,6 +1020,9 @@ h5 {
 }
 
 @media (max-width: 767px) {
+  .window_section::after {
+    top: 96px;
+  }
   .about_content {
     margin-bottom: 40px;
   }
@@ -1154,5 +1173,11 @@ h5 {
   .awards_block {
     padding-left: 0 !important;
     padding-top: 1rem !important;
+  }
+}
+
+@media (max-width: 346px) {
+  .window_section::after {
+    top: 134px;
   }
 }
