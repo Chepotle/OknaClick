@@ -1146,6 +1146,9 @@ h5 {
   .intro_title {
     font-size: 42px;
   }
+  .window_section::after {
+    top: 58px;
+  }
   .intro_text {
     font-size: 20px;
   }
@@ -1169,6 +1172,12 @@ h5 {
   }
 }
 
+@media (max-width: 546px) {
+  .window_section::after {
+    top: 96px;
+  }
+}
+
 @media (max-width: 380px) {
   .awards_block {
     padding-left: 0 !important;
@@ -1176,7 +1185,7 @@ h5 {
   }
 }
 
-@media (max-width: 346px) {
+@media (max-width: 345px) {
   .window_section::after {
     top: 134px;
   }
