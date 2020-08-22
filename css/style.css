@@ -1033,6 +1033,9 @@ h5 {
   .cost_img {
     display: none;
   }
+  .footer_text {
+    text-align: center !important;
+  }
   .cost {
     background-image: none;
     text-align: center;
