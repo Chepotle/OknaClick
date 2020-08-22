@@ -2,8 +2,8 @@
 @import "_fonts";
 
 body {
-	font-family: Museo Sans Cyrl !important;
-    font-weight: 500 !important;
+	font-family: Museo Sans Cyrl ;
+    font-weight: 500 ;
     main {
         overflow: hidden;
     }
@@ -25,7 +25,8 @@ $cyg: #ABCB56;
 // templates
 
 %btn-grd {
-    width: 224px;
+    max-width: 224px;
+    width: 100%;
     height: 48px;
     background: linear-gradient(-45deg, #FB4D4F, #F4BA5B,);
     border-radius: 55px;
@@ -55,7 +56,8 @@ $cyg: #ABCB56;
 }
 
 %input-img {
-    width: 240px;
+    max-width: 240px;
+    width: 100%;
     height: 45px;
     border-radius: 33px;
     background-repeat: no-repeat;
@@ -75,17 +77,18 @@ $cyg: #ABCB56;
 
 .h2 {
     color: $cg;
-    font-weight: 30px;
     font-weight: 900;
-    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .h3 {
     @include text(25px,700,$cg);
+    margin-bottom: 15px;
 }
 
 h5 {
-    font-size: 20px !important;
+    font-size: 20px ;
 }
 
 // navi
@@ -96,32 +99,20 @@ h5 {
 
 .navi_btn {
     @extend %btn-grd;
+    max-width: 200px;
+    width: 100%;
 }
 
-
-.test {
-    min-height: 450px;
-    background-color: $cg;
-}
-
-.test_img {
-    min-height: 450px;
-    background-image: url(../img/background.png);
-    opacity: .3;
-    
-
-}
 
 // intro
 
 .intro {
-    min-height: 450px;
     position: relative;
     &::after {
         content: "";
         background-image: url(../img/background.png);
         opacity: .3;
-        width: 53.54%;
+        width: 55%;
         height: 100%;
         top: 0;
         left: 0;
@@ -131,7 +122,7 @@ h5 {
         content: "";
         background-color: $cg;
         position: absolute;
-        width: 53.54%;
+        width: 55%;
         height: 100%;
         top: 0;
         left: 0;
@@ -139,7 +130,7 @@ h5 {
 }
 
 .intro_img {
-    width: 46.46%;
+    width: 45%;
     position: absolute;
     right: 0;
     top: 0;
@@ -158,10 +149,11 @@ h5 {
     position: relative;
     z-index: 3;
     width: 50%;
-    
-    
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
-
 
 .intro_sub {
     &::after {
@@ -174,9 +166,7 @@ h5 {
         transform: translateY(0%);
         background-color: $cyg;
     }
-    }
-
-
+}
 
 .intro_text {
     @include text(24px,700,#fff);
@@ -211,7 +201,11 @@ h5 {
 // trade
 
 .trade {
-    margin-top: 20px;
+    margin-top: 25px;
+}
+
+.trade_article {
+    margin-bottom: 25px;
 }
 
 .trade_img {
@@ -246,6 +240,10 @@ h5 {
     
 }
 
+.trade_section {
+    margin-bottom: 20px;
+}
+
 .trade_item {
     display: flex;
     justify-content: space-between;
@@ -269,20 +267,12 @@ h5 {
 // window
 
 .window {
-    margin-bottom: 40px;
+    padding-bottom: 40px;
     position: relative;
-    .h2 {
-        margin-bottom: 20px;
-        margin-top: 30px;
-    }
-    img {
-        height: 100%;
-    }
-    
 }
 
 .window_block {
-    padding: 20px 20px 20px 30px !important;
+    padding: 20px 20px 20px 30px ;
     box-shadow: 5px 5px 30px grey;
     font-size: 18px;
     max-height: 346px;
@@ -292,34 +282,56 @@ h5 {
     }
 }
 
-.window_section {
+.window_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 5px 5px 30px grey;
+    padding: 25px;
     &::after {
         content: "";
         position: absolute;
-        top: 58px;
-        left: 15px;
+        top: 0px;
+        left: 0px;
         width: 10px;
-        height: 346px;
+        height: 100%;
         background-color: $cyg;
+        
     }
 }
+
+.window_img {
+    padding: 0;
+    display: flex;
+}
+
 
 // present
 
 .present_text {
     @include text(18,100,black);
+    margin-top: 20px;
 }
 
 // call
 
 .call {
-    min-height: 260px;
     background-color: $cg;
     margin-top: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.call_container {
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .call_header {
     @include text(30px,900,white);
+    margin: 0;
 }
 
 .call_back {
@@ -345,6 +357,7 @@ h5 {
     @extend %btn-grd;
     width: 240px;
     height: 53px;
+    border: none;
 }
 
 .call_agree {
@@ -356,11 +369,15 @@ h5 {
 
 .call_img {
     position: absolute;
-    bottom: -26px;
+    bottom: 0;
     right: 0;
-    width: 257px;
-    height: 313px;
+    max-width: 257px;
+    max-height: 313px;
 
+}
+
+.call_row {
+    align-items: center;
 }
 
 .call_container {
@@ -369,8 +386,8 @@ h5 {
 
 // example
 
-.example {
-    margin-top: 35px;
+.example_header {
+    margin-bottom: 0;
 }
 
 
@@ -386,31 +403,34 @@ h5 {
 .achive_count {
     @include text(70px,900,white);
     line-height: 2.5rem;
+    text-align: center;
     span {
         font-size: 25px;
     }
 }
 
-.achive_row {
+.achive {
     min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 // pros
 
 .pros {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .pros_img {
-    position: absolute;
-    left: 0;
-    top: 0;
+    width: 60px;
+    height: 50px;
 }
 
 .pros_text {
     @include text(18px,700,#000);
-    margin-left: 4rem;
-    margin-top: .5rem;
+    margin-left: 15px;
+    margin-bottom: 15px;
     span {
         font-weight: 300;
         
@@ -419,17 +439,25 @@ h5 {
 
 // work
 
-.work {
-    margin-top: 40px;
+.work_img {
+    padding: 0;
+    display: flex;
 }
 
 .work_text {
     font-weight: 300;
     font-size: 18px;
-    padding: 20px 20px 20px 30px !important;
+    padding: 25px;
     box-shadow: 5px 5px 30px grey;
-    overflow-y: auto;
-    height: 320px;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+        width: 10px;
+        height: 100%;
+        background-color: $cyg;
+    }
 }
 
 
@@ -439,30 +467,28 @@ h5 {
     img {
         height: 100%;
     }
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: 7px;
-        width: 10px;
-        height: 320px;
-        background-color: $cyg;
-    }
+    
 }
 
 // cost
 
 .cost {
-    margin: 40px 0; 
+    margin: 70px 0; 
     background-color: $cg;
     background-image: url(../img/ost4.png);
     background-position: right;
     background-repeat: no-repeat;
-    min-height: 325px;
     color: white;
     position: relative;
+    .container {
+        min-height: 325px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
     h2, .cost_title {
         font-weight: 900;
+        margin: 0;
     }
 
     h2 {
@@ -488,16 +514,15 @@ h5 {
 
 .cost_text {
     font-weight: 300;
+    position: relative;
 }
 
 .cost_btn {
     @extend %btn-grd;
     width: 214px;
     height: 48px;
-}
-
-.cost_row {
-    min-height: 325px;
+    border: none;
+    margin-bottom: 15px;
 }
 
 .cost_img {
@@ -515,7 +540,6 @@ h5 {
 
 .about_content {
     font-size: 18px;
-    height: 270px;
     box-shadow: 5px 5px 30px grey;
     position: relative;
     z-index: 3;
@@ -538,6 +562,9 @@ h5 {
     background-color: white;
     margin: 0px 0px 5px 30px;
     height: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 270px;
 }
 
 .about_block {
@@ -606,7 +633,7 @@ h5 {
 }
 
 .scheme_item{
-    padding: 8px;
+    padding: 10px 30px;
     box-shadow: 5px 5px 30px grey;
     position: relative;
     background-color: white;
@@ -618,7 +645,7 @@ h5 {
     &::after {
         content: "";
         position: absolute;
-        left: 15px;
+        left: 0;
         top: 50%;
         height: 90%;
         width: 10px;
@@ -691,7 +718,6 @@ h5 {
 }
 
 .awards {
-    min-height: 578px;
     position: relative;
     background-image: url(../img/background.png);
     &::before {
@@ -739,6 +765,12 @@ h5 {
 
 // request
 
+.request_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .request_row {
     min-height: 362px;
 }
@@ -750,10 +782,15 @@ h5 {
 
 }
 
+.call_tel {
+    margin: 20px 0;
+}
+
 .request_btn {
     @extend %btn-grd;
     width: 263px;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .request_info {
@@ -782,7 +819,7 @@ h5 {
 
 .pay_content {
     &:hover {
-        color: linear-gradient(-45deg, #FB4D4F, #F4BA5B,) !important;
+        color: linear-gradient(-45deg, #FB4D4F, #F4BA5B,) ;
     }
 }
 
@@ -809,7 +846,7 @@ h5 {
 .footer {
     background-color: #E5E5E5;
     margin-top: 30px;
-    
+    padding-top: 30px;
 
 }
 
@@ -847,410 +884,7 @@ h5 {
 }
 
 
-
-
-
-// media
-
-// 1199
-
-@media(max-width:1199px) {
-    .navbar-brand {
-        display: none;
-    }
-
-    .about_img {
-        margin-top: 1rem;
-    }
-
-    .intro_content {
-        padding-top: 2rem !important;
-    }
-    .about_img, .about_block {
-        width: 100% !important;
-    }
-
-    .about_circle-1 {
-        bottom: -27%;
-        right: -5%;
-    }
-    .about_circle-2 {
-        bottom: 5%;
-        right: -20%;
-    }
-
-
-    .scheme_item {
-        
-        &::after {
-            left: 7px;
-        }
-    }
-
-    .scheme {
-        h2 {
-            text-align: center;
-        }
-    }
-
-    .scheme_text {
-        padding-left: 1.5rem !important;
-    }
-
-    .call {
-        .call_name {
-            margin-left: 10px;
-        }
-        .call_email {
-            margin-left: 5px;
-        }
-        .call_agree {
-            margin-left: 15px;
-        }
-
-        .call_img {
-            right: -60px;
-        }
-    }
-}
-
-// 991
-
-@media(max-width:991px) {
-
-    .cost_img {
-        display: none;
-    }
-
-    .cost {
-        background-image: none;;
-        text-align: center;
-        h2 {
-            margin: 0 auto;
-        }
-    }
-
-    .cost_btn {
-        margin: 0 auto;
-    }
-
-    .navbar-brand {
-        display: inline-block;
-    }
-
-    .intro_content {
-        padding-top: 1rem !important;
-    }
-
-    .request_info {
-        margin-bottom: 1.5rem;
-    }
-
-    .h2 {
-        text-align: center;
-    }
-    .scheme {
-        margin-top: 11rem !important;
-    }
-    .scheme_circle-1 {
-        top: 51%;
-        left: -10%;
-    }
-    .scheme_circle-2{
-        top: 151%;
-        left: 4%;
-    }
-
-    .about_circle-2 {
-        bottom: -57%;
-        right: -15%;
-    }
-
-    .about_circle-1 {
-        bottom: -26%;
-        right: 75%;
-    }
-
-    .achive_count {
-        margin-bottom: 1rem;
-    }
-
-    .call {
-        .call_name {
-            margin-left: 0px;
-        }
-        .call_email {
-            margin-left: 0px;
-        }
-        .call_agree {
-            margin-left: 0px;
-            margin-top: 1rem;
-            padding-bottom: 1rem;
-        }
-        .call_row {
-            margin-bottom: 1rem !important;
-        }
-        .call_back {
-            margin-bottom: 0 !important;
-        }
-        .call_img {
-            bottom: 5px;
-            right: -20px;
-        }
-    }
-
-    .cost {
-        .call_name {
-            margin-top: 0 !important;
-        }
-    }
-
-    .call {
-        input {
-            margin-top: 1rem;
-        }
-    }
-}
-
-// 767
-
-@media(max-width:767px) {
-
-    .window_section {
-        &::after {
-            top: 96px;
-        }
-    }
-
-    .about_content {
-        margin-bottom: 40px;
-    }
-
-    .work_text {
-        margin-top: 40px;
-    }
-
-    .window_block {
-        margin-bottom: 40px;
-    }
-
-    .cost {
-        text-align: center;
-    }
-
-    .cost h2 {
-        margin:  0 auto;
-    }
-
-    .cost_btn {
-        margin: 0 auto;
-    }
-
-    .intro_content {
-        text-align: center;
-    }
-
-    .intro_btn {
-        margin: 0 auto;
-    }
-
-    .call {
-        text-align: center;
-    }
-
-    .call_btn {
-        margin:  0 auto;
-    }
-
-    .work {
-        &::after {
-            right: 15px;
-        }
-    }
-
-    .footer_contact {
-        display: inline;
-        padding-left: .5rem !important;
-    }
-
-    .trade {
-        margin-top: 30rem !important;
-    }
-
-    .intro {
-        &::before {
-            width: 100%;
-        }
-    }
-
-    .intro {
-        &::after {
-            width: 100%;
-        }
-    }
-
-    .intro_img {
-        width: 100%;
-        top: 100%;
-    }
-
-    .intro_content {
-        width: 100%;
-        padding-top: 3rem !important;
-    }
-
-    .scheme {
-        margin-top: 1.5rem !important;
-    }
-
-
-    .scheme_circle-1 {
-        display: none;
-    }
-    .scheme_circle-2{
-        display: none;
-    }
-
-    .about_circle-2 {
-        display: none;
-    }
-
-    .about_circle-1 {
-        display: none;
-    }
-
-    .call_img {
-        display: none;
-    }
-
-    .awards {
-
-        .awards_text {
-            padding: 0 !important;
-        }
-
-        .awards_block {
-            text-align: center;
-        }
-        .awards_row {
-            justify-content: center;
-            text-align: center;
-        }
-
-        &::before {
-            width: 100%;
-            height: 60%;
-            left: 0;
-            top: 0;
-        }
-        &::after {
-            width: 100%;
-            height: 40%;
-            left: 0%;
-            top: 60%;
-        }
-    }
-
-    .trade_img {
-        img {
-            width: 100%;
-        }
-    }
-
-    .window_text {
-        margin-bottom: rem;
-    }
-
-    .h2 {
-        text-align: center;
-    }
-
-    .cost {
-        background-image: none;
-    }
-
-    .cost_img {
-        display: none;
-    }
-    .footer_text {
-        text-align: center !important;
-    }
-
-    .footer {
-        text-align: center;
-    }
-    
-}
-
-// 575
-
-@media(max-width:575px) {
-
-    .intro_title {
-        font-size: 42px;
-    }
-
-    .window_section {
-        &::after {
-            top: 58px;
-        }
-    }
-
-    .intro_text {
-        font-size: 20px;
-    }
-
-    .about_text {
-        overflow: auto;
-    }
-    .awards {
-        &::before {
-            width: 100%;
-            height: 76%;
-            left: 0;
-            top: 0;
-        }
-        &::after {
-            width: 100%;
-            height: 24%;
-            left: 0%;
-            top: 76%;
-        }
-    }
-    .achive_count {
-        font-size: 60px;
-    }
-    
-}
-
-// 546
-@media(max-width: 546px) {
-    .window_section {
-        &::after {
-            top: 96px;
-        }
-    }
-}
-
-
-// 380
-
-@media(max-width:380px) {
-    .awards_block {
-        padding-left: 0 !important;
-        padding-top: 1rem !important;
-    }
-}
-
-// 346
-@media(max-width: 345px) {
-    .window_section {
-        &::after {
-            top: 134px;
-        }
-    }
-}
-
+@import "_media";
 
 
 
