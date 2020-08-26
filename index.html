@@ -12,54 +12,75 @@
 
 <body>
 
-    <header>
-        <div class="container">
-            <nav class="navi navbar fixed-top navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">
-                    <img src="./img/logo.png" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">О компании</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Продукция
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Алюминевые окна</a>
-                                <a class="dropdown-item" href="#">Пластиковые окна</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Отделка лоджий и балконов</a>
+    <div class="container">
+        <nav class="nav">
+            <ul class="nav_menu">
+                <li><a href="">
+                        <img src="img/logo.png" alt="">
+                    </a></li>
+                <li class="nav_link"><a href="">О компании</a></li>
+                <li class="nav_link">
+                    <div class="drop_item">
+                        <span>Продукция</span>
+                        <span class="arrow_bot nav_arrow"></span>
+                    </div>
+                    <ul class="sub_menu">
+                        <li class="sub_nav_link"><a href="">Пластиковые окна</a></li>
+                        <li class="sub_nav_link"><a href="">Деревянные окна</a></li>
+                        <li class="sub_nav_link"><a href="">Металлические окна</a></li>
+                    </ul>
+                </li>
+                <li class="nav_link"><a href="">Акции и скидки</a></li>
+                <li class="nav_link"><a href="">Калькулятор</a></li>
+                <li class="nav_link"><a href="">Отзывы</a></li>
+                <li class="nav_link"><a href="">Контакты</a></li>
+                <li class="navi_btn">
+                    <a href="">Заказать звонок</a>
+                </li>
+            </ul>
+
+
+
+            <div class="burger_wraper">
+                <div class="burger_container">
+                    <ul class="burger_list">
+                        <li class="nav_link"><a href="">О компании</a></li>
+                        <li class="nav_link">
+                            <div class="drop_item">
+                                <span>Продукция</span>
+                                <span class="arrow_bot nav_arrow"></span>
                             </div>
+                            <ul class="sub_menu">
+                                <li class="sub_nav_link"><a href="">Пластиковые окна</a></li>
+                                <li class="sub_nav_link"><a href="">Деревянные окна</a></li>
+                                <li class="sub_nav_link"><a href="">Металлические окна</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Акции и скидки</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Калькулятор</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Отзывы</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Контакты</a>
+                        <li class="nav_link"><a href="">Акции и скидки</a></li>
+                        <li class="nav_link"><a href="">Калькулятор</a></li>
+                        <li class="nav_link"><a href="">Отзывы</a></li>
+                        <li class="nav_link"><a href="">Контакты</a></li>
+                        <li class="navi_btn">
+                            <a href="">Заказать звонок</a>
                         </li>
                     </ul>
-                    <div class="navbar-text p-0" href="#">
-                        <a href="#" class="navi_btn">Заказать звонок</a>
-                    </div>
                 </div>
-            </nav>
-        </div>
+            </div>
 
+            <div class="nav_burger_menu">
+                <div class="burger_logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="burger">
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <header>
         <div class="container-fluid intro">
             <div class="intro_img"></div>
             <div class="container intro_container">
@@ -69,9 +90,9 @@
                         и лоджий
                     </div>
                     <div class="intro_text">
-                        Монтаж в день доставки
-                        Нас рекомендуют друзьям
-                        Предоплата 20%
+                        Монтаж в день доставки <br>
+                        Нас рекомендуют друзьям <br>
+                        Предоплата 20% <br>
                         Остекление балкона от 600 руб. / кв. метр
                     </div>
                     <a href="#" class="intro_btn">Онлайн оплата</a>
@@ -580,34 +601,67 @@
 
         <div class="container pros">
             <div class="row">
-                <div class="col-md-6 col-12 d-flex justify-content-center">
-                    <img class="pros_img" src="./icons/prem1.svg" alt="img">
-                    <div class="pros_text">Окна от производителя <br> <span>Отсутствие посредников и лишних трат</span>
+                <div class="col-md-6 col-12 pros_section">
+                    <div class="pros_item">
+                        <img class="pros_img" src="./icons/prem1.svg" alt="img">
+                        <div class="pros_text">
+                            <span class="pros_title">Окна от производителя</span>
+                            <br>
+                            <span class="pros_content">Отсутствие посредников и лишних трат</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-12 d-flex justify-content-center">
-                    <img class="pros_img" src="./icons/prem4.svg" alt="img">
-                    <div class="pros_text">Окна от производителя <br> <span>Отсутствие посредников и лишних трат</span>
+                <div class="col-md-6 col-12 pros_section">
+                    <div class="pros_item">
+                        <img class="pros_img" src="./icons/prem4.svg" alt="img">
+                        <div class="pros_text">
+                            <span class="pros_title">Оперативност</span>
+                            <br>
+                            <span class="pros_content">Бесплатные замеры в день обращения. Установка окон
+                                на 3-тий день после замера
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-12 d-flex justify-content-center">
-                    <img class="pros_img" src="./icons/prem2.svg" alt="img">
-                    <div class="pros_text">Окна от производителя <br> <span>Отсутствие посредников и лишних трат</span>
+                <div class="col-md-6 col-12 pros_section">
+                    <div class="pros_item">
+                        <img class="pros_img" src="./icons/prem2.svg" alt="img">
+                        <div class="pros_text">
+                            <span class="pros_title">Индивидуальный подход</span>
+                            <br>
+                            <span class="pros_content">Выполним даже самую сложную работу</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-12 d-flex justify-content-center">
-                    <img class="pros_img" src="./icons/prem5.svg" alt="img">
-                    <div class="pros_text">Окна от производителя <br> <span>Отсутствие посредников и лишних трат</span>
+                <div class="col-md-6 col-12 pros_section">
+                    <div class="pros_item">
+                        <img class="pros_img" src="./icons/prem5.svg" alt="img">
+                        <div class="pros_text">
+                            <span class="pros_title">Надежность</span>
+                            <br>
+                            <span class="pros_content">У нас есть сертификаты на все виды работ</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-12 d-flex justify-content-center">
-                    <img class="pros_img" src="./icons/prem3.svg" alt="img">
-                    <div class="pros_text">Окна от производителя <br> <span>Отсутствие посредников и лишних трат</span>
+                <div class="col-md-6 col-12 pros_section">
+                    <div class="pros_item">
+                        <img class="pros_img" src="./icons/prem3.svg" alt="img">
+                        <div class="pros_text">
+                            <span class="pros_title">Более 20 лет на рынке</span>
+                            <br>
+                            <span class="pros_content">Богатый опыт – залог качества предлагаемых нами товаров и
+                                услуг</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-12 d-flex justify-content-center">
-                    <img class="pros_img" src="./icons/prem6.svg" alt="img">
-                    <div class="pros_text">Окна от производителя <br> <span>Отсутствие посредников и лишних трат</span>
+                <div class="col-md-6 col-12 pros_section">
+                    <div class="pros_item">
+                        <img class="pros_img" src="./icons/prem6.svg" alt="img">
+                        <div class="pros_text">
+                            <span class="pros_title">Доверие</span>
+                            <br>
+                            <span class="pros_content">Мы оправдали доверие более 110 000 клиентов</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1067,47 +1121,8 @@
             </div>
         </div>
     </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-
+    <script src="js/burger.js"></script>
+    <script src="js/drop_item.js"></script>
 </body>
 
 </html>

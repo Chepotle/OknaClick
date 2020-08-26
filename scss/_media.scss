@@ -7,12 +7,8 @@
         display: none;
     }
 
-    .about_img {
-        
-    }
-
-    .intro_content {
-        
+    .navi_btn {
+        width: 160px;
     }
     .about_img, .about_block {
         width: 100%;
@@ -165,15 +161,13 @@
     .window_img {
         margin-top: 40px;
         justify-content: center;
+        padding: 0 15px;
     }
 
     .work_img {
         justify-content: center;
         margin-bottom: 40px;
-    }
-
-    .pros {
-        text-align: center;
+        padding: 0 15px;
     }
 
     .achive_count {
@@ -196,11 +190,35 @@
     .achive_count span {
         font-size: 22px;
     }
+
+    .nav_menu {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .intro {
+        transition-duration: 0.5s;
+    }
+
+    .nav_burger_menu {
+        display: flex;
+    }
 }
 
 // 767
 
 @media(max-width:767px) {
+
+    .burger_container {
+        width: 540px;
+    }
+
+    .nav_burger_menu {
+        width: 540px;
+    }
 
     .achive {
         flex-direction: column;
@@ -372,6 +390,15 @@
 // 575
 
 @media(max-width:575px) {
+
+    .burger_list {
+        padding-left: 15px;
+    }
+
+    .nav_burger_menu {
+        padding: 0 15px;
+    }
+
 
     .intro_title {
         font-size: 42px;

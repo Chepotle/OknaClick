@@ -39,6 +39,116 @@
   font-style: normal;
 }
 
+.burger {
+  display: none;
+  width: 40px;
+  height: 30px;
+  position: relative;
+}
+
+.burger span {
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  left: 0;
+  top: 13px;
+  background-color: black;
+}
+
+.burger::before {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: black;
+  content: "";
+  height: 2px;
+}
+
+.burger::after {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  content: "";
+  height: 2px;
+}
+
+.nav_burger_menu {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 720px;
+  display: none;
+}
+
+.burger_wraper {
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.burger_list {
+  list-style: none;
+  position: absolute;
+  top: -350px;
+  left: 0;
+  padding: 0;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.burger_list .nav_link {
+  margin: 20px 0;
+}
+
+.burger_logo {
+  position: relative;
+  z-index: 5;
+}
+
+.burger_container {
+  width: 720px;
+  height: 0;
+  position: relative;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.intro_margin {
+  margin-top: 450px !important;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.wraper_open {
+  height: 450px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.burger_open {
+  display: block;
+  top: 80px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
 body {
   font-family: Museo Sans Cyrl;
   font-weight: 500;
@@ -145,16 +255,122 @@ h5 {
   font-size: 20px;
 }
 
-.dropdown-item.active, .dropdown-item:active {
+.nav {
+  position: fixed;
+  background-color: #fff;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+  width: 1140px;
+  padding: 0 15px;
+}
+
+.nav_link {
+  position: relative;
+}
+
+.nav_link a {
+  color: #000;
+  text-decoration: none;
+}
+
+.drop_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.sub_menu {
+  list-style: none;
+  position: absolute;
+  left: -10px;
+  top: 25px;
+  padding: 0;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  display: none;
+  z-index: 7;
+}
+
+.sub_menu_open {
+  display: block;
+}
+
+.sub_nav_link {
+  position: relative;
+  padding: 10px;
+}
+
+.sub_nav_link:hover {
   background-color: #28B663;
 }
 
-.navi_btn {
-  width: 200px;
+.sub_nav_link:hover a {
+  color: #fff;
+}
+
+.sub_nav_link a {
+  color: #000;
+  text-decoration: none;
+}
+
+.navi_btn:focus {
+  outline: none !important;
+}
+
+.navi_btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.arrow_bot {
+  width: 0;
+  height: 0;
+  border-top: 7px solid black;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  margin-left: 7px;
+}
+
+.arrow_top {
+  width: 0;
+  height: 0;
+  border-bottom: 7px solid black;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  margin-left: 7px;
 }
 
 .intro {
   position: relative;
+  margin-top: 100px;
 }
 
 .intro::after {
@@ -501,21 +717,36 @@ h5 {
   margin-top: 40px;
 }
 
+.pros_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 60px;
+}
+
 .pros_img {
   width: 60px;
   height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .pros_text {
-  font-size: 18px;
-  font-weight: 700;
-  color: #000;
   margin-left: 15px;
   margin-bottom: 15px;
 }
 
-.pros_text span {
+.pros_title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.pros_content {
+  font-size: 18px;
   font-weight: 300;
+  color: #000;
 }
 
 .work_img {
@@ -998,6 +1229,9 @@ h5 {
   .navbar-brand {
     display: none;
   }
+  .navi_btn {
+    width: 160px;
+  }
   .about_img, .about_block {
     width: 100%;
   }
@@ -1089,15 +1323,14 @@ h5 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 0 15px;
   }
   .work_img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 40px;
-  }
-  .pros {
-    text-align: center;
+    padding: 0 15px;
   }
   .achive_count {
     font-size: 50px;
@@ -1115,9 +1348,30 @@ h5 {
   .achive_count span {
     font-size: 22px;
   }
+  .nav_menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .intro {
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+  }
+  .nav_burger_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media (max-width: 767px) {
+  .burger_container {
+    width: 540px;
+  }
+  .nav_burger_menu {
+    width: 540px;
+  }
   .achive {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1239,6 +1493,12 @@ h5 {
 }
 
 @media (max-width: 575px) {
+  .burger_list {
+    padding-left: 15px;
+  }
+  .nav_burger_menu {
+    padding: 0 15px;
+  }
   .intro_title {
     font-size: 42px;
   }
