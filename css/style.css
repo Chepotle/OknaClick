@@ -330,9 +330,6 @@ h5 {
 
 .sub_nav_link:hover {
   background-color: #28B663;
-}
-
-.sub_nav_link:hover a {
   color: #fff;
 }
 
